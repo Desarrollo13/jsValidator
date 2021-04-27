@@ -8,8 +8,22 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <form id="myForm" action="" method="get"></form>
+    <form id="myForm" action="" method="get">
+      <div>
+        <label>Nombre:</label>
+        <input type="text" class="jsValidator" name="name" />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" class="jsValidator" name="email" />
+      </div>
+    </form>
 
     <script src="./js/jsValidator.js"></script>
+    <script>
+      // instancio la clase de jsValidator
+      const myformValidator = new JsValidator("myForm");
+      console.log(myformValidator.inputs);
+    </script>
   </body>
 </html>
