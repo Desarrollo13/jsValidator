@@ -11,19 +11,30 @@
     <form id="myForm" action="" method="get">
       <div>
         <label>Nombre:</label>
-        <input type="text" class="jsValidator" name="name" />
+        <input
+          type="text"
+          class="jsValidator"
+          name="name"
+          data-validators="required length"
+        />
       </div>
       <div>
         <label>Email:</label>
-        <input type="email" class="jsValidator" name="email" />
+        <input
+          type="email"
+          class="jsValidator"
+          name="email"
+          data-validators="required"
+        />
       </div>
+      <button type="submit">Enviar</button>
     </form>
 
     <script src="./js/jsValidator.js"></script>
     <script>
       // instancio la clase de jsValidator
       const myformValidator = new JsValidator("myForm");
-      console.log(myformValidator.inputs);
+      myformValidator.validateForm();
     </script>
   </body>
 </html>
